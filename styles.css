@@ -1,0 +1,440 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Шапка */
+header {
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #45a049;
+}
+
+.phone {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Герой-секция */
+.hero {
+    position: relative;
+    background: linear-gradient(15deg, rgba(76, 175, 80, 0.8), rgba(69, 160, 73, 0.8)), url('https://pro-dachnikov.com/uploads/posts/2021-10/1633427701_43-p-varianti-blagoustroistva-pridomovoi-territ-49.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.cta-button {
+    background-color: #45a049;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.cta-button:hover {
+    background-color: #3d8b40;
+    transform: translateY(-2px);
+}
+
+/* Секция услуг */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #e8f5e9;
+}
+
+.services h2 {
+    color: #4CAF50;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-icon img {
+    transform: rotate(15deg);
+}
+
+.service-card h3 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.service-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service-card ul li {
+    margin-bottom: 10px;
+}
+
+/* Секция преимуществ */
+.features {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.features h2 {
+    color: #4CAF50;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: #e8f5e9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-icon img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon img {
+    transform: scale(1.1);
+}
+
+.feature-card h3 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+/* Секция стоимости */
+.pricing {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #e8f5e9;
+}
+
+.pricing h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.pricing-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: px;
+}
+
+/* Контакты */
+.contacts {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.contacts h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.contact-info a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Футер */
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Шапка */
+header {
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #45a049;
+}
+
+.phone {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Герой-секция */
+.hero {
+    position: relative;
+    background: linear-gradient(15deg, rgba(76, 175, 80, 0.8), rgba(69, 160, 73, 0.8)), url('https://pro-dachnikov.com/uploads/posts/2021-10/1633427701_43-p-varianti-blagoustroistva-pridomovoi-territ-49.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 150px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.cta-button {
+    background-color: #45a049;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+.cta-button:hover {
+    background-color: #3d8b40;
+    transform: translateY(-2px);
+}
+
+/* Стрелки между секциями */
+.section-arrow {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-arrow svg {
+    width: 100px;
+    height: 100px;
+    transform: rotate(90deg);
+    animation: float 3s infinite ease-in-out;
+}
+.pricing-contyainer{
+    display: flex;
+    max-width: 1200px;
+    margin:  0 auto;
+}
+.pricing-contyainer img{
+    max-width: 800px;
+    margin-right: 60px;
+}
+
+/* Остальные стили остаются без изменений */
+/* Стрелки между секциями */
+.section-arrow {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.section-arrow img {
+    width: 100px; /* Размер стрелки */
+    height: auto; /* Сохраняем пропорции */
+
+    animation: float 3s infinite ease-in-out; /* Анимация плавающего эффекта */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg); /* Учитываем поворот в анимации */
+    }
+    50% {
+        transform: translateY(-20px) rotate(0deg); /* Учитываем поворот в анимации */
+    }
+}
