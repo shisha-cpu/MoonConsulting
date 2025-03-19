@@ -233,6 +233,7 @@ nav a:hover {
     max-width: 800px;
     margin: 0 auto;
     font-size: px;
+    font-size: 25px;
 }
 
 /* Контакты */
@@ -411,11 +412,23 @@ nav a:hover {
     max-width: 1200px;
     margin:  0 auto;
 }
+
 .pricing-contyainer img{
     max-width: 800px;
     margin-right: 60px;
 }
-
+@media (max-width:760px) {
+    .pricing-contyainer{
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+        margin:  0 auto;
+    }
+    .pricing-contyainer img{
+        max-width: 80svw;
+        margin-right: 0;
+    }
+}
 /* Остальные стили остаются без изменений */
 /* Стрелки между секциями */
 .section-arrow {
@@ -437,4 +450,78 @@ nav a:hover {
     50% {
         transform: translateY(-20px) rotate(0deg); /* Учитываем поворот в анимации */
     }
+}/* Блок с информацией */
+.info-block {
+    display: flex;
+
+    justify-content: space-between;
+align-items: center;
+    background-color: #e8f5e9; /* Светло-зеленый фон */
+    margin: 40px 0;
+    padding: 30px;
+    max-width:1200px ;
+    margin:  0 auto;
+    margin-top: 20px;
+
+}
+
+@media (max-width:760px) {
+    .info-block {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .pricing-content {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: px;
+        font-size: 16px;
+    }
+}
+.info-content {
+
+}
+
+.info-content h2 {
+    color: #4CAF50; /* Зеленый цвет */
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.info-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.info-content ul li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.info-content ul li strong {
+    color: #4CAF50; /* Зеленый цвет для выделения */
+}
+
+.info-content .link {
+    color: #4CAF50; /* Зеленый цвет для ссылки */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.info-content .link:hover {
+    text-decoration: underline;
+}
+
+.info-image {
+    max-width: 50%;
+}
+
+.info-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Скругленные углы */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
 }
